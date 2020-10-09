@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boom bam</title>
+    <link rel="stylesheet" href="css/my.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1170px)"
+      href="css/phone.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="jqueris/jquery-ui.min.js"></script>
+    <script src="jqueris/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jqueris/jquery-ui.min.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="jqueris/jquery-ui.theme.css" />
+  </head>
+  <body id="body1">
+    <nav id="navbar">
+      <div id="logo" onmouseover="store_id(this.id)">
+        <img id="img1" src =
+        https://m.hindustantimes.com/rf/image_size_1200x900/HT/p2/2020/03/01/Pictures/_9c3e2f08-5b8d-11ea-af9c-120932ee3561.png
+        >
+      </div>
+      <ul>
+        <li class="item">
+          <a id="nave1" onmouseover="store_id(this.id)" href="#home"> home</a>
+        </li>
+        <li class="item">
+          <a id="nave2" onmouseover="store_id(this.id)" href="#temp">temp</a>
+        </li>
+        <li class="item">
+          <a id="nave3" onmouseover="store_id(this.id)" href="#about"
+            >about us</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div id="bgdiv">
+      <div class="inpclass" id="inp">
+        <img
+          src="img/chbg.jpg"
+          id="icon"
+          width="50px"
+          height="50px"
+          style="border-radius: 50%"
+        />
+      </div>
+    </div>
+      <div id="adddiv">
+        <div class="inpclass" id="adbtn">
+          <img
+            src="https://www.freeiconspng.com/uploads/add-icon--icon-search-engine-1.png"
+            id="adbtnicon"
+            width="50px"
+            height="50px"
+            style="border-radius: 50%"
+            data-toggle="collapse"
+            data-target="#addmenu"
+            role="button"
+            aria-expanded="false"
+            aria-controls="addmenu"
+          />
+        </div>
+        
+      </div>
+
+      <section id="home">
+        <!-- ondblclick="changeimg(this.id)"-->
+
+        <h1 class="h-primary" id="heading" onmouseover="store_id(this.id)">
+          Welcome to MyOnlineMeal
+        </h1>
+
+        <p id="p1" onmouseover="store_id(this.id)">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
+          dolorum numquam minus.
+        </p>
+        <p id="p2" onmouseover="store_id(this.id)">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <button class="btn" id="b1" onmouseover="store_id(this.id)">
+          Order Now
+        </button>
+      </section>
+
+      <section id="services-container">
+        <h1 class="h-primary center" style="text-align: center">
+          Our Services
+        </h1>
+        <div id="services">
+          <div class="box" onkeypress="" onmouseover="resize(this.id)">
+            <img src="img/1.png" alt="" />
+            <h2 class="h-secondary center">Food Catering</h2>
+            <p class="center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,
+              culpa suscipit error Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Et qui, repudiandae similique nam, recusandae
+              quidem ab asperiores ex, aut fugit labore veritatis facere? sint
+              delectus ab dolorum nam. Debitis facere, incidunt voluptates eos,
+              mollitia voluptatem iste sunt voluptas beatae facilis labore,
+              omnis sint quae eum.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/2.png" alt="" />
+            <h2 class="h-secondary center">Bulk Ordering</h2>
+            <p class="center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,
+              culpa suscipit error Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Unde laudantium a incidunt animi ad, ab
+              dignissimos vero? Unde numquam odit repudiandae perferendis nisi.
+              sint delectus ab dolorum nam. Debitis facere, incidunt voluptates
+              eos, mollitia voluptatem iste sunt voluptas beatae facilis labore,
+              omnis sint quae eum.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="javascipts/main.js"></script>
+
+    <!-- <script type="text/javascript" src="try1j.js">
+            var input23;
+            var currentid;
+            var favcolor1;
+            var imgid;
+            function store_id(clicked_id)
+                                         {
+                                          currentid = clicked_id;
+                                               // alert(currentid)
+                                          edittextbef();
+                                            }
+           
+        
+    
+
+            function edittextbef(){
+                
+               var try4 = document.getElementById(currentid).innerHTML='<form style"opacity:1;" id="form" onsubmit="return false;"><iframe src="try3.html"><p style="fontsize:20 color:black">Enter text here </p><input style"opacity:0.2;" type="text" id="userInput" placeholder="enter your text here"><br><p style="fontsize:20 color:black">Enter font size here</p><input style"opacity:0.2;" type="number" id="fsize1" placeholder="enter font size"><br><p style="fontsize:20 color:black">Select your color</p><input type="color" id="favcolor" id="favcolor" value="#ff0000"><br> <input type="submit" onmouseover="name23()"><a href="try3.html">try me</a></iframe></form>'
+            }
+            
+
+               function name23(){
+                                  input23 = document.getElementById("userInput").value;
+                                  favcolor1= document.getElementById("favcolor").value;
+                                  fsize2 = document.getElementById("fsize1").value;
+                                   edittext();
+                                   editcolor();
+                                   fsize();
+                                 console.log('it runned ');
+                                }
+
+
+
+                            //     function changeimg(clicked_id1) {
+
+                            //             imgid = clicked_id1;
+                            //             document.getElementById(imgid).innerHTML='<input type="text" id="myimg" placeholder="enter your url here"><input type="submit" onmouseover="changeimgapp()">';
+                            // }
+                            // function changeimgapp(){
+                            //            var imgurl = document.getElementById("myimg").value;
+                            //            console.log(imgurl)
+
+
+                            //          document.getElementById(imgid).style.background = `url(${imgurl})`;
+                            //            }
+                                       
+                           // function resize(){
+                           //     document.getElementById("logo").style.resize = "both";
+                           //     console.log('ewuuycEWC')
+                           // }
+            function ffamily(){
+
+            }
+            function fsize(){
+                document.getElementById(currentid).style.fontSize=`${fsize2}px`;
+            }
+            function editcolor(){
+                    document.getElementById(currentid).style.color=favcolor1;
+                }
+            function edittext() {
+                    document.getElementById(currentid).innerHTML= input23;
+                    console.log('it runned ');
+                }
+                </script> -->
+  </body>
+</html>
