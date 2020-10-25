@@ -8,11 +8,12 @@ var chbg;
 var btnicon;
 var btn;
 var status = 1;
+var htmlbef;
 
 function store_id(clicked_id) {
   currentid = clicked_id;
   testiing();
-   hovering();
+  //  hovering();
   console.log(currentid);
 }
 
@@ -23,17 +24,17 @@ function testiing() {
   document.getElementById(currentid).addEventListener("dragstart", ddrag);
   // document.getElementById(currentid).addEventListener("contextmenu", del_dom);
   // document.getElementById(currentid).addEventListener("click", store_c_id(this.id));
-  document.getElementById(currentid).addEventListener("mouseover", hovering);
+  // document.getElementById(currentid).addEventListener("mouseover", hovering);
+  document.getElementById(currentid).addEventListener("click", function(){document.getElementById(currentid).contentEditable = "true";})
   // document.getElementById("icon").addEventListener("click", changeimg);
   // document.getElementById("adbtnicon").addEventListener("click", add_menu);
-
+   document.getElementById("saveme").addEventListener("click", save);
+  //  document.getElementById("delete").addEventListener("click", deleteing);
 }
 //random tweaks
-function hovering(){
-  var rands = document.getElementById(currentid).style.border = "black";
-  document.getElementById(currentid).style.resize = "both";
-  console.log("rands");
-}
+// function hovering(){
+//   document.getElementById(currentid).style.border = "black";
+// }
 //storing clicked id
 // function store_c_id(my_id){
 //   var current_c_id;
@@ -44,12 +45,19 @@ function hovering(){
 //form hml
 
 function edittextbef() {
+  htmlbef = document.getElementById(currentid).innerHTML;
+  document.getElementById(currentid).innerHTML += "<button id='moretools' onclick='edittextbef2()' > EDIT MORE</button>"
+  
+  
+
+}
+function edittextbef2(){
+  document.getElementById(currentid).innerHTML = htmlbef;
   var try4 = document.getElementById(currentid).innerHTML;
   var cur_fsize = document.getElementById(currentid).style.fontSize;
   document.getElementById(currentid).innerHTML +=
-    '<form  id="form" style="max-width:500px;max-height:400px;padding:20px 20px 20px 20px;align-items:left;background:cornflowerblue;justify-items:left;border-radius:20px;" onsubmit="return false;"><input type="text" id="userInput" style="height:40px;width:300px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;" placeholder="your text here"><input  style="height:40px;width:100px;padding:10px 10px 10px 10px;margin:10px 10px 10px 10px;font-size:16px;border-radius:10px;" type="number" id="fsize1" placeholder="size"> <button  style="height:80px;width:80px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;" id="b1" onclick="align23(this.id)">LEFT ALIGN</button><button style="height:80px;width:80px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;"  id="b2" onclick="align23(this.id)">CENTER ALIGN</button><button style="height:80px;width:80px;margin:10px 15px 10px 10px;font-size:21px;border-radius:10px;" id="b3" onclick="align23(this.id)">RIGHT ALIGN</button><input type="color" style="width:100px;height:40px;margin:10px 10px;border-radius:10px;" id="favcolor"   value="#ffffff"><select id="input-font"  class="input" onchange="changeFontStyle (this);"><option value="Times New Roman" selected="selected"> Times New Roman</option> <option value="Arial">Arial</option> <option value="fantasy">Fantasy</option> <option value="cursive">cursive</option> </select><input style="width:100px;height:40px;border-radius:20px;font-size:21px;margin:0px 0px" type="submit" onclick="name23()">';
-  document.getElementById("userInput").value = try4;
-
+    '<form  id="form" style="max-width:500px;max-height:400px;padding:20px 20px 20px 20px;align-items:left;background:cornflowerblue;justify-items:left;border-radius:20px;" onsubmit="return false;"><p id ="bigX" onclick="closemenu()">X</p><input type="text" id="userInput" style="height:40px;width:300px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;" placeholder="your text here"><input  style="height:40px;width:100px;padding:10px 10px 10px 10px;margin:10px 10px 10px 10px;font-size:16px;border-radius:10px;" type="number" id="fsize1" placeholder="size"> <button  style="height:80px;width:80px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;" id="b1" onclick="align23(this.id)">LEFT ALIGN</button><button style="height:80px;width:80px;margin:10px 10px 10px 10px;font-size:21px;border-radius:10px;"  id="b2" onclick="align23(this.id)">CENTER ALIGN</button><button style="height:80px;width:80px;margin:10px 15px 10px 10px;font-size:21px;border-radius:10px;" id="b3" onclick="align23(this.id)">RIGHT ALIGN</button><input type="color" style="width:100px;height:40px;margin:10px 10px;border-radius:10px;" id="favcolor"   value="#ffffff"><select id="input-font"  class="input" onchange="changeFontStyle (this);"><option value="Times New Roman" selected="selected"> Times New Roman</option> <option value="Arial">Arial</option> <option value="fantasy">Fantasy</option> <option value="cursive">cursive</option> </select><input style="width:100px;height:40px;border-radius:20px;font-size:21px;margin:0px 0px" type="submit" onclick="name23()">';
+    document.getElementById("userInput").value = try4;
 }
 //calling functions
 function name23() {
@@ -60,6 +68,9 @@ function name23() {
   editcolor();
   fsize();
   
+}
+function closemenu(){
+  document.getElementById(currentid).innerHTML = htmlbef;
 }
 
 //font size
@@ -78,6 +89,7 @@ function editcolor() {
 
 function edittext() {
   document.getElementById(currentid).innerHTML = input23;
+
   
 }
 
@@ -88,7 +100,7 @@ var changeFontStyle = function f_family(font) {
 };
 // removing 
 function deleteing(){
-  document.getElementById(currentid).remove;
+  document.getElementById(currentid).children.remove;
 }
 // draging element
 
@@ -253,3 +265,15 @@ function add_text() {
 // function del_dom2(){
   
 // }
+function save() {
+  var data23 = document.getElementsByTagName("html")[0].innerHTML;
+  var htmlContent = [data23];
+  var bl = new Blob(htmlContent, {type: "text/html"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(bl);
+  a.download = "yourfile.html";
+  a.hidden = true;
+  document.body.appendChild(a);
+  a.innerHTML = "something random - nobody will see this, it doesn't matter what you put here";
+  a.click();
+}
